@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="Zhang Each">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>3180103772张溢弛实验1</title>
+  <style type="text/css">
+  .form1{
+    color:black;
+    font-family:"楷体";
+    font-weight:bolder;
+    text-align:left;
+ }
+ .form2{
+    color:black;
+    font-family:"宋体";
+    font-weight:bold;
+    text-align:left;
+ }
+ </style>
+</head>
+
+<body>
+ <h1 align="center" style="color:royalblue"> <b>注册界面</b></h1>
+ <h2 align="center" style="font-family: 楷体;">亲爱的同学 欢迎你考入浙江大学 请先注册您的个人账号</h2>
+<form>
+<table width="550px" bgcolor="#f2f2f2" align="center">
+
+  <tr>
+    <td class="form1">姓名*</td>
+    <td><input type="text" name="username" placeholder="请输入您的真实姓名" class="form2"></td>
+  </tr>
+
+  <tr>
+    <td class="form1">密码*</td>
+	<td><input type="password" id="X"name="codeX" class="form2" ></td>
+  </tr>
+
+  <tr>
+    <td class="form1">确认密码*</td>
+	<td><input type="password" id="Y"name="codeY" class="form2"></td>
+  </tr>
+
+  <tr>
+    <td class="form1">性别</td>
+	<td>男<input type="radio" name="sex" value="male" class="form2">
+	女<input type="radio" name="sex" value="female" class="form2"></td>
+  </tr>
+
+  <tr>
+    <td class="form1">上传照片</td>
+	<td><input type="file" name="photo" class="form2"></td>
+  </tr>
+
+  <tr>
+    <td class="form1">所在院校</td>
+	<td><input type="text" name="school" class="form2"></td>
+  </tr>
+
+  <tr>
+    <td class="form1">自我陈述</td>
+  <td><input type="text" name="introduce" Size="60" style="height:60px"
+     placeholder="简要介绍一下你自己" class="form2"></td>
+  </tr>
+
+  <tr>
+  <td><a href="http://www.zju.edu.cn">联系我们</a></td>
+  <td><a href="http://www.baidu.com">信息查询</a></td>
+  </tr>
+
+</table>
+ </form>
+ <center><input type="button"  onclick="checkcode( )" value="注册" name="button1"></center>
+ <div><center><img src="校徽.jpg"/></center></div>
+
+ <script type="text/javascript">
+function checkcode()
+  {
+      var x,y,namai;
+      x=document.getElementsByName("codeX")[0].value;
+      y=document.getElementsByName("codeY")[0].value;
+      namai=document.getElementsByName("username")[0].value;
+      if(namai==""){
+        alert("姓名不能为空!")
+        window.location.href="注册页面.html"
+      }
+
+      else if(x==y&&x=="") {
+        alert("密码不能为空")
+        window.location.href="注册页面.html"
+      }
+      else if(x==y){
+        alert("注册成功")
+        window.location.href="登陆页面(请看这里).html"
+      }
+        else{
+          alert("密码不一致，请重新注册!")
+      }
+  }
+
+</script>
+</body>
+
+</html>

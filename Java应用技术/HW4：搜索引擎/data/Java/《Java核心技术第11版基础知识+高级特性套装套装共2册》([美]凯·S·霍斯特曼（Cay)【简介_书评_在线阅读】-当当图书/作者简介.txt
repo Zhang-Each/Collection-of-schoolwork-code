@@ -1,0 +1,1 @@
+[美]凯.S.霍斯特曼（Cay S. Horstmann ） 圣何塞州立大学计算机科学系教授、Java的倡导者。 他是《Java核心技术》两卷本的作者，并著有《Core Java SE 9 for the Impatient, Second Edition》 (Addison-Wesley 2018)和《Scala for the Impatient, Second Edition》(Addison- Wesley, 2017)。 还为专业程序员和计算机科学专业的学生撰写过数十本其他图书。

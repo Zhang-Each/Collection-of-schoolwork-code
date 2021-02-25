@@ -1,0 +1,1 @@
+李兴华，著名IT培训讲师、北京魔乐科技（MLDN）软件实训中心教学总监和首席讲师，有着丰富的Java/Android/Java EE开发经验和多年培训经验；专业技术特长领域有Android、Java、J2EE、WebSphere、DB2、Oracle、流行设计框架（Struts、Spring、Hibernate）、EJB、多种设计模式、UML。 2008年出版《从零开始学Java》系列讲座光盘，因讲解深入浅出、通俗易懂、语言凝练、实用性强而深受广大学员欢迎。 2009年出版《Java开发实战经典》，曾蝉联很多大书店Java类图书销售榜首。

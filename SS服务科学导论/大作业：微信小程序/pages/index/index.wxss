@@ -1,0 +1,95 @@
+/**index.wxss**/
+
+/*个人记录*/
+.record {
+  display: flex;
+  text-align: center;
+  margin-top:80rpx;
+
+}
+.sign_days {
+  width:200rpx;
+ height: 100%;
+  border-right-width: 3rpx;
+  border-right-color:#434A76;
+  border-right-style:solid; 
+}
+.running_days {
+  width:200rpx;
+  height: 100%;
+}
+.long_running_days {
+  width:200rpx;
+  height: 100%;
+  border-left-width: 3rpx;
+  border-left-color:#434A76;
+  border-left-style:solid; 
+}
+.record_word{
+  color:#BCC2EA;
+  font-size: 30rpx;
+}
+.record_data{
+  color: #747DB1;
+  font-size: 40rpx;
+}
+/*箴言警句*/
+.motoo{
+ margin-top: 40rpx;
+   color: #747DB1;
+}
+.sign{
+  font-size: 40rpx;
+  margin-top:20rpx;
+  margin-bottom: 40rpx;
+}
+.signWord{
+    color: #747DB1
+
+}
+.signTime{
+  color: #BCC2EA;
+}
+.clock{
+  width: 300rpx; 
+  height: 300rpx;
+}
+.quality{
+  margin-top:150rpx;
+  color:#BCC2EA;
+  font-size: 25rpx;
+}
+/*修饰form中的button*/
+button.form_button{background-color:transparent;padding:0;margin:0;display:inline;position:static;border:0;padding-left:0;padding-right:0;border-radius:0;font-size:0rpx;color:transparent;}
+button.form_button::after{content:'';width:0;height:0;-webkit-transform:scale(1);transform:scale(1);display:none;background-color:transparent;}
+
+.table, .table div {
+margin: 0 auto;
+}
+
+.table {
+display: table;
+width: 95%;
+border-collapse: collapse;
+box-sizing: border-box;
+border-style:solid;
+margin-bottom: 40rpx;
+}
+
+.table-tr {
+display: table-row; 
+height: 92rpx;
+}
+
+.table-th {display: table-cell; 
+font-weight: bold;
+border: 1rpx solid gray;
+text-align: center;
+vertical-align: middle;}
+
+.table-td {
+font-size: 40rpx;
+display: table-cell;
+border: 1rpx solid gray;
+text-align: center;
+}

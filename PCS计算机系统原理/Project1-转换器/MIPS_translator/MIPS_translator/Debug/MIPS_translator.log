@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(27): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(138): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(167): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(192): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(203): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(217): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\74096\desktop\计算机系统原理\project1-转换器\mips_translator\mips_translator\main.cpp(224): warning C4018: “<”: 有符号/无符号不匹配
+  MIPS_translator.vcxproj -> C:\Users\74096\Desktop\计算机系统原理\Project1-转换器\MIPS_translator\Debug\MIPS_translator.exe

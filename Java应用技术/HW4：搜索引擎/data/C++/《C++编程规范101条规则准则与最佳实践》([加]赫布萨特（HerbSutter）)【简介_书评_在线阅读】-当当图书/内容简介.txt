@@ -1,0 +1,1 @@
+Herb Sutter是ISO C++标准委员会主席，《C++ Users Journal》杂志特邀编辑和专栏作家。他目前在微软公司领导.NET环境下C++语言扩展的设计工作。 Andrei Alexandrescu是C++专家，《C++ Users Journal》杂志的专栏作家，他的《Modern C++ Design》一书曾荣获2001年C++图书称号。

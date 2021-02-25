@@ -1,0 +1,1 @@
+Mark Lutz是一位世界级的Python培训讲师。他是Python畅销书籍的作者，同时从1992年起就成为Python社区的引领者。Mark有着30余年的软件开发经验，也是《Python编程》《Python袖珍指南》等书的作者。

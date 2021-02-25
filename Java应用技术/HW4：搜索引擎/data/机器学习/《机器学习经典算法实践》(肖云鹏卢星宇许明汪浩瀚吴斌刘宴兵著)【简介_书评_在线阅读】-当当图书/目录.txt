@@ -1,0 +1,407 @@
+第3章C4.53.1C4.5算法原理心理测试好做，但是关键是这些测试题怎么出才准确？答案是将被测试的群体量化得当并且区别有方。有没有方法挑选最具区别性的问题？答案之一是条件熵——C4.5。 3.1.1C4.5算法引入在一些杂志或者网站上，我们经常会看到一些“心理测试”，通过这些“测试”可以测试性格，测试运势等。虽然这些心理测试的可靠性没有依据，但能够起到一定的娱乐作用。如图31所示是截取的某心理测试的片段。 可以看到，这种类型的心理测试并不需要将测试题从头到尾做一遍，而是根据上一题的选项答案进行跳转，直到给出心理类型，这就是一个决策的过程。我们可以将测试题的跳转形式以树状图来表示，每一个节点表示一个题目，树的分支表示对应题目的选项答案，树的叶子节点表示测试的结果，即测试心理类型。树状图如图32所示。 1. 如果两个朋友各自在你面前指责对方，你会随他们的意思，表现出对另一方的不满吗？ 是的→2题 不是→7题 2. 你觉得自己是那种藏不住心事的人吗？ 是的→8题 不是→3题 …… 6. 朋友们都喜欢跟你聊心事，发泄心情吗？ 是的→B 不是→A …… 11. 与别人相处的时候，你更多地注重对方做事的一些细节，而不是他整个人的性格。这样说对吗？ 正确→D 不对→C 第3章C4.53.1C4.5算法原理心理测试好做，但是关键是这些测试题怎么出才准确？答案是将被测试的群体量化得当并且区别有方。有没有方法挑选最具区别性的问题？答案之一是条件熵——C4.5。
+3.1.1C4.5算法引入在一些杂志或者网站上，我们经常会看到一些“心理测试”，通过这些“测试”可以测试性格，测试运势等。虽然这些心理测试的可靠性没有依据，但能够起到一定的娱乐作用。如图31所示是截取的某心理测试的片段。
+可以看到，这种类型的心理测试并不需要将测试题从头到尾做一遍，而是根据上一题的选项答案进行跳转，直到给出心理类型，这就是一个决策的过程。我们可以将测试题的跳转形式以树状图来表示，每一个节点表示一个题目，树的分支表示对应题目的选项答案，树的叶子节点表示测试的结果，即测试心理类型。树状图如图32所示。
+
+1. 如果两个朋友各自在你面前指责对方，你会随他们的意思，表现出对另一方的不满吗？
+是的→2题 不是→7题
+2. 你觉得自己是那种藏不住心事的人吗？
+是的→8题 不是→3题
+……
+6. 朋友们都喜欢跟你聊心事，发泄心情吗？
+是的→B 不是→A
+……
+11. 与别人相处的时候，你更多地注重对方做事的一些细节，而不是他整个人的性格。这样说对吗？
+正确→D 不对→C
+【心理类型】
+A圆形你是个非常圆滑的人……
+B六边形你非常开朗大方……
+C三角形你的个性很冲动……
+D菱形你的好奇心特别旺盛……
+图31某心理测试片段
+
+图32心理测试树状图
+由图32可以看出，不同的选择代表着不同的决策过程，会得到不同的决策结果。想要设计这样的心理测试，除了需要收集大量的调查结果，即不同性格的人对不同问题的回答情况的数据，同时需要解决两个问题： ①我们设计的心理测试题的顺序是什么，即根据上一题的选项答案应该跳转到哪一题； ②在哪些心理测试题的选项答案后面设置测试结果。这其实也就是一棵决策树的设计过程。接下来将围绕这两个问题，来学习决策树C4.5算法。
+3.1.2科学问题1. 相关理论
+决策树是一种常见的分类和回归方法，本章主要针对分类决策树进行讨论。分类决策树描述的是一种对实例样本进行分类的树状结构，即基于特征对实例进行分类的过程，决策树算法的目的是从数据样本集中归纳出一组具有分类能力的分类规则。由于能对训练数据进行基本正确分类的决策树可能有多个或者没有，因此，我们的目标是找到与数据样本集矛盾最小的决策树。上述示例即属于分类决策树，将上述示例中心理测试的题目、答案选项以及测试的心理类型整体看成是数据样本集，心理测试的题目看成是特征集合，测试的心理类型看成是分类类别，心理测试题的设计就是我们需要构建的决策树。示例中所需要解决的两个问题也是决策树C4.5算法所需解决的问题。给定数据样本集合和特征集合，我们要解决以下两个问题。（1) 怎样选择特征来划分特征空间？从特征集合中挑选出能最大化减小数据样本集不确定性程度的特征，将其作为最优特征来划分特征空间。（2) 如何构建决策树？递归地选择最优特征，并根据该特征对数据样本集进行分割，使得对每个子集都有一个最好的分类，得到一个与数据样本集矛盾最小的决策树。2. 问题定义
+决策树算法的输入是数据样本集合D={(x1，y1),(x2，y2),…,(xM，yM)}和特征集合A={a1,a2,…,aN}。其中，M表示数据样本集合中样本的个数； N表示特征集合中特征的个数； xm=［x1,x2,…,xN］表示一个样本的特征向量，其维度为N； ym表示样本的分类标签； an表示一个特征，xm中的xn表示特征an的取值。决策树算法的输出是一个与数据样本集矛盾最小的决策树
+Tree=TreeGenerate(D,A)。
+3.1.3算法流程1. 特征选择
+为了解决科学问题1，通过从特征集合A={a1,a2,…,ad}中挑选出能最大化减小数据样本集不确定性程度的特征，即a*n=argmaxanGan(D,an)实现。其中，Gan(D,an)表示挑选特征an使数据样本集减少的不确定性程度。在C4.5算法中，我们用信息增益比来表示Gan(D,an)。为了更好地说明信息增益比，下面先了解一下有关熵和信息增益的概念。
+在信息论与数理统计中，熵表示的是对随机变量不确定性的度量，条件熵表示的是在已知某个随机变量的条件下，对另一随机变量不确定性的度量。我们分别用H(D)表示数据样本集合D的熵，H(D|an)表示集合D在条件an下的条件熵。假设数据样本集合D={(x1，y1),(x2，y2),…,(xM，yM)}
+中的样本个数为M； D中样本的分类为Ck，k=1,2,…,K； 属于每个类别Ck的样本个数为MCk。假设特征集合A={a1,a2,…,aN}
+中特征的个数为N； 根据特征an的取值将D划分成I个子集，D1,D2,…,DI,子集Di中的样本个数为Mi。记子集Di中属于类别Ck的样本集合为Dik，其样本个数为Mik。则H(D)和H(D|an)的计算公式如下： 
+H(D)=-∑kk=1MCkMlog2MCkM(31)
+H(D|an)=∑Ii=1MiMH(Di)=-∑Ii=1MiM
+∑Kk=1MikMlog2MikM(32)
+由于我们需要挑选出能最大化减小数据样本集不确定性程度的特征，根据熵和条件熵的概念，可以知道熵与条件熵之差即是数据样本集不确定性程度的减少量，我们称这个差值为信息增益，计算公式如下： 
+
+Gain(D,an)=H(D)-H(D|an)
+(33)
+
+Gain(D,an)表示由于特征an而使得对数据样本集D的分类的不确定性减小的程度，则我们应该选择的特征为信息增益最大的特征，即： 
+
+a*n=argmaxanGain(D,an)
+(34)
+如果以信息增益准则划分数据样本集，存在的问题是偏向于选择可取值数目较多的特征。为了减少这种偏好带来的负面影响，C4.5算法采用信息增益比来选择最佳划分特征。信息增益比，即信息增益Gain(D,an)与数据样本集D关于特征an的熵Han(D)之比，计算公式如下： 
+
+Gain_ratio(D,an)=Gain(D,an)Han(D)(35)
+Han(D)=-∑Ii=1MiMlog2MiM(36)
+
+根据信息增益比准则的特征选择方法是： 对数据样本集D，计算每个特征的信息增益比并比较它们的大小，选择信息增益比最大的特征来划分D，即： 
+a*n=argmaxanGain_ratio(D,an)
+(37)
+值得一提的是，信息增益并不是决策树选取特征的唯一方法。基尼不纯度通常也被用于决策树中特征的选取。尽管两种方法有截然不同的理论背景，但是大量实验表明，这两种方法的表现并没有显著差异。除了基尼不纯度之外，特征的分割度也可以用于选取特征。2. 决策树的生成为了解决科学问题2，通过递归地选择最优特征a*n=argmaxanGan(D,an)
+，并根据该特征对数据样本集进行分割，使得对每个子集都有一个最好的分类，得到一个与数据样本矛盾最小的决策树Tree=CreateTree(D,A)。对于这一过程，具体的方法是： 首先，构造根节点，将所有的数据样本都放在根节点。然后根据信息增益比准则选择一个最优特征进行数据样本集的分割，使得分割后的各个子集在当前条件下有最好的分类。如果子集中所有样本均被正确分类，则对此子集构造叶子节点； 若仍有部分子集中的样本不能被正确分类，则对这部分子集选择新的最优特征，并继续对其分割子集，构造相应的节点。对各个节点递归地调用上述方法，直到所有数据样本都能被正确分类或者所有特征都已被使用。最后生成了一棵决策树，数据样本集中每个样本都被分到对应的叶子节点中。当特征数量远远超过构建决策树所需特征数时，在构建决策树之前，可以先进行一次特征筛选，挑选出对数据样本集有足够分类能力的特征。3. 决策树的使用上述内容主要介绍了如何从原始数据样本集中创建决策树，下面将重点放在如何利用决策树进行数据分类上。
+依靠训练数据创建决策树以后，利用这棵决策树以及特征集合便可对测试数据进行分类，决策树的使用同生成过程类似，依旧是一个递归过程。对每一个测试样本，比较样本在决策树中特征节点上的取值，从而跳转到下一个节点，递归执行该过程，直到跳转到叶子节点，最后将测试数据类别定义为该叶子节点所属类别。由于递归构造决策树的过程很耗时，为了提高时间性能，需要将创建好的决策树存储成一个对象，在对测试样本每次执行分类时调用已经创建好的决策树直接进行分类。3.1.4算法描述
+根据上述算法流程，决策树C4.5算法的核心思想是： 在决策树的各个节点上使用信息增益比准则来选择特征，递归地构建决策树。在C4.5算法中，有三种情形会导致递归返回： ①当前节点中的所有样本都具有相同类别，则停止划分，递归返回； ②当前没有剩余特征可供划分，则停止划分，递归返回； ③当前节点中的数据样本集合为空，则停止划分，递归返回。算法描述如下。
+算法41C4.5算法。
+
+
+输入： 数据样本集合D={(x1,y1),(x2,y2),…,(xM,yM)};
+特征集合A={a1,a2,…,aN};过程： CreateTree(D,A)1:生成树节点node;2:for A的每一个未被用来划分数据集的特征an do3:按照公式(35)计算信息增益比Gain_ration(D,an)，并比较它们的大小4:保存信息增益比最大的特征为最优特征a*5:end for6:if D中所有样本属于同一类别Ck then7: 将node标记为Ck类别的叶子节点; return8:end if9:if A= or  D中样本在A上取值完全相同 then10:将node标记为叶子节点，其类别标记为包含样本数最多的类(Ck)max; return11:end if12:if D= then13:return14:else15:根据a*的每一个取值ai*分割样本集D，得到样本子集Di16:调用CreateTree(Di,A＼{a*})生成分支节点17:end if输出： 以node为根节点的一棵决策树
+
+
+
+3.1.5补充说明在决策树的学习中将已生成的树进行简化的过程称为剪枝。为了尽可能地正确分类样本，节点的划分过程可能会不断重复，有时会造成决策树的分支过多，以至于将一些不具有分类能力的特征用户划分数据样本集，从而导致过拟合，降低分类的准确性。因此，可以通过主动剪掉一些分支来降低过拟合的影响。决策树剪枝的一种方法是通过极小化决策树整体的损失函数来实现。通过递归地从树的叶子节点向上回缩，比较叶子节点回缩到父亲节点之前和之后的决策树的损失函数值； 若损失函数值减小，则进行剪枝并将其父亲节点作为新的叶子节点； 重复上述过程直到不能剪枝为止，则可以得到损失函数最小的决策树。
+3.2C4.5算法实现3.2.1简介
+对于C4.5算法的实现，我们采用Java语言进行实现。算法的实现流程如图33所示，具体的类名称及其描述如表31所示。
+
+图33算法设计流程图
+
+表31类名称及其描述
+
+类名称类描述
+Example（描述数据样本集合中的数据样本点）
+成员变量： 
+
+private ArrayList
+ featureList;   //特征列表
+private String featureIndex;   //所属类别索引
+
+
+
+Node（描述决策树中的树节点）
+成员变量： 
+
+private String featureName;   //划分树节点的特征取值
+private int featureIndex;   //划分树节点的特征
+private ArrayList
+ dataList;   //树节点存储的数据
+private ArrayList
+ childrenList;   //孩子列表
+private String type;   //节点分类(只有叶子节点有节点分类)
+
+
+FileOperate（描述文件的读入）
+函数： 
+
+/** 读取数据样本集 */
+public static ArrayList
+ loadData(String data_path,String label){…}
+
+
+AlgorithmUtil（描述算法的工具）
+函数： 
+
+/** 将数据集按比例分配给训练样本列表和测试样本列表 */
+public static ArrayList
+> dataProcessing(double trainRate, ArrayList
+ dataList){…}
+
+
+Configuration（描述工程的配置）
+成员变量： 
+
+public static final String DATA_PATH="data/nursery.data";  //数据存放路径
+public static final double TRAIN_RATE=0.7;   //训练集比例
+
+
+续表
+类名称类描述
+
+DecisionTree（描述决策树C4.5算法）
+函数： 
+
+/** 构造决策树 */
+public void creatTree(Node node){…}
+
+/** 测试决策树分类器 */
+public void test(ArrayList
+ testList,Node classification){…}
+
+/** 选择最佳划分方式 */
+public int selectBestFeature(ArrayList
+ tempDataList){…}
+
+/** 计算给定特征的信息增益比 */
+public double getInfoGainRatio(ArrayList
+ tempDataList,int featureIndex){…}
+
+/** 计算给定数据集的熵 */
+public double calcEnt(ArrayList
+ tempDataList){…}
+
+/** 获取给定数据集可能分类的出现个数 */
+public Map
+ getLabelCount(ArrayList
+ tempDataList){…}
+
+/** 获取给定特征的不同取值 */
+public Map
+ getFeatureKeyMap(ArrayList
+ tempDataList,int featureIndex){…}
+
+/** 依据给定特征的取值划分数据集 */
+public ArrayList
+ getSplitDataList(ArrayList
+ tempDataList,int featureIndex,String featureName){…}
+
+
+续表
+类名称类描述
+
+DecisionTree
+
+
+/** 判断子节点的样本类别是否为同一分类 */
+public boolean judgeWholeCnt(Node node){…}
+
+/** 判断分类特征是否用完 */
+public boolean judgeFeatureUsed(Node node){…}
+
+/** 如果所有分类特征都被用完，则采用多数表决方法决定节点类别 */
+public String majorityVote(ArrayList
+ tempDataList){…}
+
+/** 打印决策树路径(先序) */
+public void printTreePath(Node node){…}
+
+/** 判断一条测试数据的类别 */
+public String judgeType(Example data,Node node){…}
+
+/** 计算决策树分类器的准确率 */
+public double calcAccuracy(String［］ truth,String［］ prediction){…}
+
+
+MainClass（描述算法的主类）
+主函数： 
+
+public static void main(String［］ args) {…}
+
+
+
+Example用来描述数据，数据是指一些具有多种特征及标签的样本。Node用来描述决策树中的树节点，用于存储树结构。FileOperate用来描述文件的读入。AlgorithmUtil用来描述算法工具，包括将数据集划分成训练集和测试集。Configuration用来描述算法的相关配置，如读入的文件路径和训练集的比例。DecisionTree用来描述决策树C4.5算法，包括特征选择以及决策树的生成。MainClass是算法的主类，主函数在该类中。3.2.2核心代码DecisionTree类中有计算熵的方法，根据公式(31)计算熵，具体如下。
+
+1/**
+2* 计算给定数据集的熵
+3* @param tempDataList 临时数据集
+4* @return ent 给定数据集的熵
+5*/
+6public double calcEnt(ArrayList
+ tempDataList) {
+7double ent=0;//初始熵
+8
+9//计算熵
+10Map
+ labelCount=getLabelCount(tempDataList);
+//记录各个类别包含样本数的map表
+11Iterator
+ it=labelCount.keySet().iterator();
+12while (it.hasNext()) {
+13String key=it.next();
+14int count=labelCount.get(key);
+15double p=(double) count / (double) tempDataList.size();
+16ent -=p * Math.log(p) / Math.log(2.0);
+17}
+18return ent;
+19}
+
+
+
+
+在DecisionTree类中，计算过熵和条件熵后，根据公式(36)计算一个特征ai的熵，然后根据公式(37)计算并选择信息增益比最大的特征作为划分数据集的特征。具体如下。
+
+1/**
+2* 计算给定特征的信息增益比
+3* @param tempDataList 临时数据集
+4* @param featureIndex 特征索引
+5* @return infoGainRatio 给定特征的信息增益比
+
+
+6*/
+7public double getInfoGainRatio(ArrayList
+ tempDataList,
+8int featureIndex) {
+9double ent=calcEnt(tempDataList);//计算熵
+10double conditionEnt=0;//计算条件熵
+11double featureEnt=0;//计算特征值的熵
+12
+13Map
+ featureKeyMap=getFeatureKeyMap(tempDataList,
+14featureIndex);//获取该特征的不同取值
+15Iterator
+ it=featureKeyMap.keySet().iterator();
+16while (it.hasNext()){
+17String featureName=it.next();
+18ArrayList
+ splitDataList=getSplitDataList
+(tempDataList,
+19featureIndex, featureName);//划分数据集
+20double p=(double) splitDataList.size()
+21/ (double) tempDataList.size();
+22double splitDataListEnt=p * calcEnt(splitDataList);//计算划分后数据集的条件熵
+23double featureEntForOne=-p * Math.log(p) / Math.log(2.0);
+//计算划分数据集的特征值的熵
+24conditionEnt =splitDataListEnt;
+25featureEnt =featureEntForOne;
+26}
+27double infoGainRatio=(ent - conditionEnt) / featureEnt;//计算信息增益比
+28return infoGainRatio;
+29}
+30
+31/**
+32* 选择最优划分特征
+33* @param tempDataList 临时数据集
+34* @return bestFeature 最佳特征索引
+35*/
+36public int selectBestFeature(ArrayList
+ tempDataList) {
+37int featureCount=tempDataList.get(0).getFeatureList().size();//特征个数
+
+
+38double infoGainRatioMax=0;//最大信息增益比
+39int bestFeature=-1;//划分方式的特征索引
+40
+41for (int i=0; i 
+42double infoGainRatio=getInfoGainRatio(tempDataList, i);
+43if (infoGainRatioMax 
+44infoGainRatioMax=infoGainRatio;
+45bestFeature=i;
+46}
+47}
+48return bestFeature;
+49}
+
+
+
+在DecisionTree类中，最主要的函数是递归生成决策树，具体如下。
+
+1/**
+2* 构造决策树
+3* @param node 树节点
+4*/
+5public void creatTree(Node node) {
+6//选择最优划分特征
+7int bestFeature=selectBestFeature(node.getDataList());
+8
+9//当前节点中包含的样本完全属于同一类别，无须划分(递归返回出口1)
+10if (judgeWholeCnt(node)){
+11String type=node.getDataList().get(0).getFeatureIndex();
+12node.setType(type);
+13return;
+14}
+15//当前特征集合为空，无法划分(递归返回出口2)
+16if (judgeFeatureUsed(node)){
+17String type=majorityVote(node.getDataList());
+//取样本数最多的类别
+18node.setType(type);
+19return;
+20}
+
+
+21//当前节点包含的样本集合为空，不能划分,此时不会生成新的节点(递归返
+//回出口3)
+22if (node.getDataList().size()==0) {
+23return;
+24}
+25
+26//递归构造决策树，更新节点的孩子列表
+27else {
+28ArrayList
+ childrenList=new ArrayList
+();
+//创建孩子列表
+29
+30//获取最佳划分方式的特征取值
+31Map
+ featureKeyMap=getFeatureKeyMap(
+32node.getDataList(), bestFeature);
+33Iterator
+ it=featureKeyMap.keySet().iterator();
+34while (it.hasNext()) {
+35String featureName=it.next();
+36ArrayList
+ dataList=getSplitDataList(
+37node.getDataList(), bestFeature, featureName);
+38
+39//删除用过的属性，用"null"替代
+40for (int i=0; i 
+41ArrayList
+ xList=dataList.get(i).
+getFeatureList();
+42xList.set(bestFeature, "null");
+43}
+44Node childTree=new Node(featureName, bestFeature, dataList);
+45
+46//递归
+47creatTree(childTree);
+48childrenList.add(childTree);
+49}
+50node.setChildrenList(childrenList);
+51}
+52}
+
+
+决策树构造完成后，对新给出的样本数据进行测试并判别分类，具体如下。
+
+1/**
+2* 判断一条测试数据的类别
+3* @param data 一条测试数据
+4* @param node 树节点
+5* @return String 数据类别
+6*/
+7public String judgeType(Example data, Node node) {
+8//如果是叶子节点，则返回叶子节点类别并返回
+9if (node.getType() !=null){
+10return node.getType();
+11}
+12//遍历节点的孩子列表，找到对应特征以及对应的值
+13else {
+14ArrayList
+ featureList=data.getFeatureList();
+15ArrayList
+ childrenList=node.getChildrenList();
+16for (int i=0; i 
+17Node childNode=childrenList.get(i);
+18int featureIndex=childNode.getFeatureIndex();
+19String featureName=childNode.getFeatureName();
+20if (featureList.get(featureIndex).equals(featureName)){
+21return judgeType(data, childNode);
+22}
+23}
+24}
+25return null;
+26}
+
+
+
+3.3实验数据我们的实验数据选自UCI数据库（网址链接： http://archive.ics.uci.edu/ml/），数据集nursery.data是一个幼儿园数据集（数据下载地址： http://archive.ics.uci.edu/ml/machinelearningdatabases/nursery/nursery.data）。该数据集包含12960个入学儿童的自身及家庭状况以及是否推荐他们入学，其具体统计信息如表32所示。
+
+表32数据集统计信息
+
+数据集统 计 信 息
+parentsusual, pretentious,great_prethas_nursproper,less_proper, improper, critical, very_critformcomplete, completed, incomplete, fosterchildren1, 2, 3, morehousingconvenient,less_conv, criticalfinanceconvenient,inconvsocialnonprob, slightly_prob, problematichealthrecommended, priority,not_recom5 classesnot_recom, recommend, very_recom, priority, spec_prior
+3.4实验结果3.4.1结果展示
+使用以上数据集对C4.5算法进行测试，抽取的训练数据集和测试数据集的比例为7∶3，运行结果如表33所示。
+
+表33 测试结果
+
+测试项测 试 结 果
+生成决策树（部分）{7—priority—>{1—critical—>{0—usual—>{4—less_conv—>{3—3—>:spec_prior}{3—2—>{2—complete—>:priority}{2—foster—>:spec_prior}{2—completed—>:priority}……{3—more—>:spec_prior}}{5—convenient—>:priority}}}}}}{7—not_recom—>:not_recom}
+续表
+测试项测 试 结 果
+测试正确率0.974022633744856运行时间546ms
+3.4.2结果分析观察上述数据集的实验结果可以发现，通过决策树构建的分类规则直观且易于理解，程序运行时间较短且正确率较高，较好地表现出C4.5算法计算速度快、准确性较高的特点。然而在有噪声的情况下，C4.5算法会对训练数据完全拟合，产生过拟合现象。对训练数据的完全拟合反而不具有很好的预测性能，会降低对测试数据的分类准确性。为了克服过拟合问题，决策树的剪枝是解决该问题的主要手段。
+
+
+ 显示全部信息

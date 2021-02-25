@@ -1,0 +1,1 @@
+Stanley B. Lippman 目前是微软公司 Visual C 团队的架构师。他从1984年开始在贝尔实验室与C 的设计者Bjarne Stroustrup一起从事C 的设计与开发。他在迪士尼和梦工厂从事动画制作，还担任过JPL的高级顾问。 Josée Lajoie 曾经是IBM加拿大研究中心C/C 编译器开发团队的成员，在ISO C 标准委员会工作了7年，担任过ISO核心语言工作组的主席和C Report杂志的专栏作家。 Barbara E. Moo 是拥有25年软件经验的独立咨询顾问。在AT&T，她与Stroustrup、Lippman一起管理过复杂的C 开发项目。

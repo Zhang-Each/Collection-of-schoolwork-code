@@ -1,0 +1,1 @@
+“有思想、有深度的指南，从专业人士那儿来的第一手资料。” ——Neil Horlock，Credit Suisse “简化了C++多线程的黑魔法”。 —Rick Wagner，Red Hat “读这本书让我头痛，但痛定思痛”。 —Joshua Heyer，Ingersoll Rand “作者展示了如何将并发变为现实。” —Roger Orr，OR/2 Limited

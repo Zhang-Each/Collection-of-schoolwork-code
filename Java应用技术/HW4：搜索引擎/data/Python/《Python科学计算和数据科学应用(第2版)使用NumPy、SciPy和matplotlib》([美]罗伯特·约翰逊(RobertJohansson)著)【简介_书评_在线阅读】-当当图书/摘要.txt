@@ -1,0 +1,1 @@
+图书特色  ◆ 使用NumPy处理数组和矩阵  ◆ 使用matplotlib绘图和可视化数据  ◆ 使用Pandas和SciPy进行数据分析  ◆ 使用statsmodels和scikit-learn进行统计  建模和机器学习  ◆ 使用Numba和Cython优化Python代码

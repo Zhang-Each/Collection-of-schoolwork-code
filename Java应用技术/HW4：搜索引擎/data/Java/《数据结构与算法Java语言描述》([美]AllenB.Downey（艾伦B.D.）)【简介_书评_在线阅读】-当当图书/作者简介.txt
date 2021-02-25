@@ -1,0 +1,1 @@
+Allen B. Downey是奥林工程学院计算机科学领域的教授,曾经在韦尔斯利学院、科尔比学院和伯克利大学执教。他拥有伯克利大学计算机科学博士学位及麻省理工学院硕士和学士学位。他编写的其他书籍有：《Think Java》、《Think Python》、《Think Stats》和《Think Bayes》。

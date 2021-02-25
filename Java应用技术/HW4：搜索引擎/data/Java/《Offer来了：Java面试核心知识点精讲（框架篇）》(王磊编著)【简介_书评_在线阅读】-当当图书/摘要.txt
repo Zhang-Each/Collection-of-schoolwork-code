@@ -1,0 +1,7 @@
+★ 《Offer来了：Java面试核心知识点精讲（原理篇）》作者全新力作
+★ 目录细致，原理图和流程图直观形象
+★ 提出4周5天3小时学习法，迅速掌握面试重点
+★ 快速掌握Spring、Spring Cloud、Netty、ZooKeeper、Kafka、Hadoop的核心知识
+★ 深度剖析HBase、Cassandra、ElasticSearch、Spark、Flink的重点难点
+★ 实用性强，是一本面向Java开发者不可多得的面试指南
+★ 一书在手，Offer我有！

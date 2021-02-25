@@ -1,0 +1,1 @@
+本书介绍了如何利用Python 3开发网络爬虫，书中首先介绍了环境配置和基础知识，然后讨论了urllib、requests、正则表达式、Beautiful Soup、XPath、pyquery、数据存储、Ajax数据爬取等内容，接着通过多个案例介绍了不同场景下如何实现数据爬取，*后介绍了pyspider框架、Scrapy框架和分布式爬虫。 本书适合Python程序员阅读。

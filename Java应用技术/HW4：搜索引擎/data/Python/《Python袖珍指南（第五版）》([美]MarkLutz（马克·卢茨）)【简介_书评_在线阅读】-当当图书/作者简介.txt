@@ -1,0 +1,130 @@
+目录 本书约定 Python 命令行用法 Python 命令选项 命令行程序规范 Python 2. X 命令选项 Python 环境变量 操作变量 Python 命令选项变量 Python Windows 发送器用法 发送器文件指令 发送器命令行 发送器环境变量 内置类型和运算符 
+	目录
+
+
+	说明 
+本书约定 
+Python 命令行用法 
+Python 命令选项 
+命令行程序规范 
+Python 2. X 命令选项 
+Python 环境变量 
+操作变量 
+Python 命令选项变量 
+Python Windows 发送器用法 
+发送器文件指令 
+发送器命令行 
+发送器环境变量 
+内置类型和运算符 
+运算符和优先级 
+运算符用法说明
+分类操作 
+序列运算说明 
+特殊内建类型 
+number （数字） 
+字符串 
+Unicode 字符串 
+列表 
+字典 
+元组 
+文件 
+集合 
+其他类型及转换 
+语句和语法 
+语法规则 
+命名规则 
+专用语句 
+赋值语句 
+Expression 语句 
+Print 语句 
+if 语句 
+while 语句 
+for 语句 
+pass 语句 
+break 语句 
+continue 语句 
+del 语句 
+def 语句 
+return 语句 
+yield 语句 
+global 语句 
+nonlocal 语句 
+import 语句 
+from 语句 
+class （类）语句 
+try 语句 
+raise 语句 
+assert 语句 
+with 语句 
+Python 2.X 语句 
+命名空间与范围规则 
+限定名：对象命名空间 
+非限定名: 词法作用域 
+嵌套范围与闭包 
+面向对象编程 类和实例 
+伪私有属性 
+新型类 
+形式继承规则 
+运算符重载方法 所有的类型方法 
+用于集合的方法（序列，映射） 
+数值方法（二元运算符） 
+数值方法（其他运算）
+描述符方法
+上下文管理器方法
+Python 2.X 运算符重载方法
+内建函数
+Python 2.X 内建函数
+内建异常超类：类型
+专用异常
+专门的OSError 异常
+警告类异常
+警告框架
+Python 3.2内建异常
+Python 2.X 内建异常
+内建属性标准库模块
+sys 模块
+字符串模块函数与类
+常数
+os 系统模块
+管理工具
+可移植性常数
+Shell 命令
+环境工具
+文件描述符工具
+文件路径名工具
+进程控制
+Os.path 模块
+re 模式匹配模块模块函数
+正则表达式对象
+匹配对象
+模式的语法
+对象持久化模块
+shelve 和dbm 模块
+pickle 模块
+tkinter GUI 模块和工具
+tkinter 示例
+tkinter 的核心窗口控件
+通用对话框调用
+附加的tkinter 类和工具
+Tcl/Tk 到Python/tkinter 的映射
+Internet 模块和工具
+其他标准库模块数学模块
+时间模块
+Timeit 模块
+日期时间模块
+random （随机）模块
+json 模块
+子进程模块
+enum （枚举）模块
+struct 模块
+Threading （线程）模块
+Python SQL 数据库API 
+API 用法实例
+模块接口连接对象
+指针对象
+类型对象和构造函数
+更多的提示和习语核心语言提示
+环境提示
+用法提示
+分类提示
+ 显示全部信息

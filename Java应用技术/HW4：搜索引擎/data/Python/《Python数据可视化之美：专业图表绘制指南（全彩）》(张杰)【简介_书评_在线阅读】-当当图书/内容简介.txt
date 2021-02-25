@@ -1,0 +1,1 @@
+本书主要介绍如何使用Python 中的matplotlib、Seaborn、plotnine、Basemap 等包绘制专业图表。本书首先介绍Python 语言编程的基础知识，以及NumPy 和Pandas 的数据操作方法；再对比介绍matplotlib、Seaborn 和plotnine 的图形语法。本书系统性地介绍了使用matplotlib、Seaborn 和plotnine 绘制类别对比型、数据关系型、时间序列型、整体局部型、地理空间型等常见的二维和三维图表的方法。另外，本书也介绍了商业图表与学术图表的规范与差异，以及如何使用matplotlib 绘制HTML 交互页面动画。

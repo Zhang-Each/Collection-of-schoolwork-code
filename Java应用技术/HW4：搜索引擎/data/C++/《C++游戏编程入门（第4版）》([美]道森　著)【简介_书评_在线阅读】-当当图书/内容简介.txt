@@ -1,0 +1,1 @@
+Michael Dawson是一位程序员、游戏设计师和游戏开发者。他获得了南加州大学的计算机科学学士学位，并且目前教授大学生学习游戏编程。Mike的著作包括Beginning C++ Through Game Programming, Python Programming for the Absolute Beginner, C++ Projects: Programming withText-Based Games和 Guide to Programming with Python。请访问他的网站www.programgames.com，了解他的图书的更多信息，并获得相关的支持。

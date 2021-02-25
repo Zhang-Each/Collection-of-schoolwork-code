@@ -1,0 +1,1 @@
+Al Sweigart 是一名软件开发者，还教小孩和成人编程。他为初学者写了几本Python 书籍，包括《Python 密码学编程》、《Python 游戏编程快速上手》和《Python 和Pygame 游戏开发指南》。

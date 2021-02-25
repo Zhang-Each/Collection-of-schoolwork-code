@@ -1,0 +1,1 @@
+Mark Lutz 是 Pyhon 培训的世界领导者，同时也是最早且最畅销的 Python 书籍的作者，并且是 1992 年以来 Python 社区的开拓者。 25 年来， Mark 一直是一名软件开发人员，并且是《 Programming Python 》前一版的作者，也是 O ’ Reilly 公司出版的 《 Learning Python 》和《 Python Pocket Reference 》的作者。

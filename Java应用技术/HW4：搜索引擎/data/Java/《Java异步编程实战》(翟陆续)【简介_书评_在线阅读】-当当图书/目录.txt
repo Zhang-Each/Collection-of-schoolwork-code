@@ -1,0 +1,112 @@
+前言 第1章　认识异步编程1 1.1　异步编程概念与作用1 1.2　异步编程场景2 1.3　总结9 第2章　显式使用线程和线程池实现异步编程10 2.1　显式使用线程实现异步编程10 2.2　显式使用线程池实现异步编程14 2.2.1　如何显式使用线程池实现异步编程14 2.2.2　线程池ThreadPoolExecutor原理剖析17 2.3　总结34 3.1　JDK 中的Future35 3.2　JDK中的FutureTask37 3.2.1　FutureTask 概述37 
+前言
+第1章　认识异步编程1
+1.1　异步编程概念与作用1
+1.2　异步编程场景2
+1.3　总结9
+
+第2章　显式使用线程和线程池实现异步编程10
+2.1　显式使用线程实现异步编程10
+2.2　显式使用线程池实现异步编程14
+2.2.1　如何显式使用线程池实现异步编程14
+2.2.2　线程池ThreadPoolExecutor原理剖析17
+2.3　总结34
+
+第3章　基于JDK中的Future实现异步编程35
+3.1　JDK 中的Future35
+3.2　JDK中的FutureTask37
+3.2.1　FutureTask 概述37
+3.2.2　FutureTask的类图结构41
+3.2.3　FutureTask的run() 方法45
+3.2.4　FutureTask的get()方法48
+3.2.5　FutureTask的cancel(boolean mayInterruptIfRunning)方法50
+3.2.6　FutureTask的局限性52
+3.3　JDK中的CompletableFuture52
+3.3.1　CompletableFuture 概述52
+3.3.2　显式设置CompletableFuture结果54
+3.3.3　基于CompletableFuture实现异步计算与结果转换56
+3.3.4　多个CompletableFuture进行组合运算65
+3.3.5　异常处理68
+3.3.6　CompletableFuture概要原理70
+3.4　JDK8 Stream & CompletableFuture76
+3.4.1　JDK8 Stream76
+3.4.2　当Stream遇见CompletableFuture79
+3.5　总结81
+
+第4章　Spring框架中的异步执行82
+4.1　Spring中对TaskExecutor的抽象82
+4.2　如何在Spring中使用异步执行84
+4.2.1　使用TaskExecutor实现异步执行84
+4.2.2　使用注解@Async实现异步执行89
+4.3　@Async注解异步执行原理96
+4.4　总结109
+
+第5章　基于反应式编程实现异步编程110
+5.1　反应式编程概述110
+5.2　Reactive Streams规范120
+5.3　基于RxJava实现异步编程123
+5.4　基于Reactor实现异步编程133
+5.5　总结136
+
+第6章　Web Servlet的异步非阻塞处理137
+6.1　Servlet概述137
+6.2　Servlet 3.0 提供的异步处理能力138
+6.3　Servlet 3.1 提供的非阻塞IO能力145
+6.4　Spring Web MVC 的异步处理能力153
+6.4.1　基于DeferredResult的异步处理154
+6.4.2　基于Callable实现异步处理155
+6.5　总结157
+
+第7章　Spring WebFlux的异步非阻塞处理158
+7.1　Spring WebFlux概述158
+7.2　Reactive编程 & Reactor库159
+7.3　WebFlux服务器160
+7.4　WebFlux的并发模型163
+7.5　WebFlux对性能的影响164
+7.6　WebFlux的编程模型164
+7.6.1　WebFlux注解式编程模型165
+7.6.2　WebFlux函数式编程模型168
+7.7　WebFlux原理浅尝171
+7.7.1　Reactor Netty概述171
+7.7.2　WebFlux服务器启动流程173
+7.7.3　WebFlux一次服务调用流程182
+7.8　WebFlux的适用场景185
+7.9　总结186
+
+第8章　高性能异步编程框架和中间件187
+8.1　异步、基于事件驱动的网络编程框架—Netty187
+8.1.1　Netty概述187
+8.1.2　Netty的线程模型190
+8.1.3　TCP半包与粘包问题196
+8.1.4　基于Netty与CompletableFuture实现RPC异步调用198
+8.2　高性能RPC框架—Apache Dubbo209
+8.2.1　Apache Dubbo概述209
+8.2.2　Dubbo的异步调用210
+8.2.3　Dubbo的异步执行214
+8.3　高性能线程间消息传递库—Disruptor217
+8.3.1　Disruptor概述217
+8.3.2　Disruptor的特性详解220
+8.3.3　基于Disruptor实现异步编程223
+8.4　异步、分布式、基于消息驱动的框架—Akka227
+8.4.1　Akka概述227
+8.4.2　传统编程模型存在的问题228
+8.4.3　Actor模型解决了传统编程模型的问题232
+8.4.4　基于Akka实现异步编程237
+8.5　高性能分布式消息框架—Apache RocketMQ244
+8.5.1　Apache RocketMQ概述244
+8.5.2　基于Apache RocketMQ实现系统间异步解耦246
+8.6　总结254
+
+第9章　Go语言的异步编程能力255
+9.1　Go语言概述255
+9.2　Go语言的线程模型256
+9.2.1　一对一模型256
+9.2.2　多对一模型257
+9.2.3　多对多模型258
+9.2.4　Go语言的线程模型259
+9.3　goroutine与channel261
+9.3.1　goroutine261
+9.3.2　channel265
+9.3.3　构建管道实现异步编程269
+9.4　总结273
+ 显示全部信息

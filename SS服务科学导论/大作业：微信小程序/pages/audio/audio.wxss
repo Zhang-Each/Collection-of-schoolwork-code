@@ -1,0 +1,10 @@
+/* pages/audio.wxss */
+.richT{
+  width: 350px;
+  height: 350px;
+  background-color: #000;
+}
+.progressT{
+  height: 4rpx;
+  width: 50%;
+}

@@ -1,0 +1,1 @@
+《Java项目开发实战入门》以一起来画画、通讯录系统、明日彩票预测系统、小小五子棋、企业进销存管理系统、企业QQ（局域网版）、九宫格记忆网和铭成在线考试系统8个精选项目为案例，从趣味性和实际应用角度出发，采用了当前主流技术，读者可以从这些项目中体验到编程的乐趣并获得实战经验。《Java项目开发实战入门》应用的主要技术及知识点有：Java AWT、Java Swing、MySQL数据库、Hibernate、BeautyEye外观样式、多线程、Socket编程、人机对战实现、Derby、JSP、JavaScript、CSS、Servlet、HTML5等

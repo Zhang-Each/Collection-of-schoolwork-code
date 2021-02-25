@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="title">
+微信小程序计算器
+</view>
+<view class="resultbox">
+<text>{{result}}</text>
+</view>
+
+ <view>  
+ <button size="mini" class='form2' >欢迎使用</button>
+ <button size="mini" class='form1' id="{{idb}}"  bindtap="clickandcal" >退格</button>
+ <button size="mini" class='form1' id="{{idc}}"  bindtap="clickandcal">清零</button>
+ <button size="mini" class='form1' id="{{idadd}}"bindtap="clickandcal">+</button>
+ </view>
+
+<view>
+ <button size="mini" class='form1' id="{{id7}}" bindtap="clickandcal">7</button>
+ <button size="mini" class='form1'  id="{{id8}}"bindtap="clickandcal">8</button>
+ <button size="mini" class='form1'id="{{id9}}"  bindtap="clickandcal">9</button>
+ <button size="mini" class='form1' id="{{idj}}" bindtap="clickandcal">-</button>
+</view>
+
+<view>
+ <button size="mini" class='form1'id="{{id4}}" bindtap="clickandcal">4</button>
+ <button size="mini" class='form1' id="{{id5}}"bindtap="clickandcal">5</button>
+ <button size="mini" class='form1' id="{{id6}}"bindtap="clickandcal">6</button>
+ <button size="mini" class='form1'id="{{idx}}" bindtap="clickandcal">*</button>
+</view>
+
+<view>
+ <button size="mini" class='form1' id="{{id1}}"   bindtap="clickandcal">1</button>
+ <button size="mini" class='form1' id="{{id2}}"   bindtap="clickandcal">2</button>
+ <button size="mini" class='form1' id="{{id3}}"   bindtap="clickandcal">3</button>
+ <button size="mini" class='form1' id="{{iddiv}}" bindtap="clickandcal">/</button>
+ </view>
+
+<view>
+ <button size="mini" class='form1' id="{{id0}}" bindtap="clickandcal">0</button>
+ <button size="mini" class='form1' id="{{idd}}" bindtap="clickandcal">.</button>
+ <button size="mini" class='form1' id="{{idm}}" bindtap="clickandcal">%</button>
+ <button size="mini" class='form1' id="{{ide}}" bindtap="clickandcal">=</button>
+ </view>

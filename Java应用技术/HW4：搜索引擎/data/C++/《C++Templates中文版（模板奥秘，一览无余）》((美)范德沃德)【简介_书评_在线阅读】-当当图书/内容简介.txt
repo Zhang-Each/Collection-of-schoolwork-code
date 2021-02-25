@@ -1,0 +1,1 @@
+David Vandevoorde 有20多年的C++工作经验，C++标准委员会成员。曾因为审校The C++Programming Language一书的草稿，获得Bjarne Stroustrup的推荐，编写了C++ Solutions。Nicolai M. Josuttis The C++ Standard Library - A Tutorial andReference（中文版名为《C++标准库》）的作者，这本书出版以后成为实际上的标准读本。

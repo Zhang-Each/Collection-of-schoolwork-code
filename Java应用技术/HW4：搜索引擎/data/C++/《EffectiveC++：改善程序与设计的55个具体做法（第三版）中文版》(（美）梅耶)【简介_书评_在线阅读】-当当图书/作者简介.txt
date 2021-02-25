@@ -1,0 +1,1 @@
+Scott Meyers是全世界最知名的C 软件开发专家之一。 他是畅销书《Effective C 》系列的作者，又是创新产品《Effective C CD》的设计者和作者，也是Addison-Wesley的 Effective Software DevelopmentSeries 顾问。

@@ -1,0 +1,32 @@
+test data 1
+3
+a
+b
+c
+mike a 1
+mike b 3
+mike c 4
+mary a 1
+lisa b 2
+jan c 3
+end
+
+test data 2
+3
+score1
+score2
+score3
+K.Weng score1 5
+K.Weng score2 5
+K.Weng score3 5
+T.Dixon score1 4
+T.Dixon score2 3
+T.Dixon score3 2
+V.Chu score1 1
+V.Chu score3 5
+K.Hiro score1 2
+K.Hiro score2 4
+G.Ping score1 5
+H.Gu score2 3
+G.Ping score3 3
+end

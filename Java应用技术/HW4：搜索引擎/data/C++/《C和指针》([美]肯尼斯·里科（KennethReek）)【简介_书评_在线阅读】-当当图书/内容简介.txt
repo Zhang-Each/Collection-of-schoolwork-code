@@ -1,0 +1,1 @@
+Kenneth Reek是美国Rochester工业学院计算机系教授，有几十年年的C编程教学经验，并凭借《C和指针》一书获得了ACUU的高度评价。

@@ -1,0 +1,59 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="motoo">{{title}}: {{total_circles}} 周期</view>
+  <view class="sign" bindtap="updateTime">
+    <image src="{{signinPic}}" class="clock" style="float:left">
+    </image> 
+      <view class='quality'>
+        <text>质量\t周期\n</text>
+        <text>及格\t28\n</text>
+        <text>良好\t32\n</text>
+        <text>优秀\t35\n</text>
+      </view>
+    <text class='signWord'>\n晚间睡眠：</text>
+    <text class="signTime">{{beginTime}}~{{endTime}}</text>
+  </view>
+<view class="table">
+  <view class="table-tr">
+    <view class="table-th">星期</view>
+    <view class="table-th">晚间睡眠周期</view>
+    <view class="table-th">白天补充周期</view>
+  </view>
+  <view class="table-tr">
+    <view class="table-th">一</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">二</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">三</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">四</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">五</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">六</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+  <view class="table-tr">
+    <view class="table-th">日</view>
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+    <input class="table-td" type="number" bindinput="bindCircleInput" />
+  </view>
+</view>
+</view>

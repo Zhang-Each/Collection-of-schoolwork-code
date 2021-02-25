@@ -1,0 +1,1 @@
+K. N. King 世界知名的计算机程序设计教育家，现为佐治亚州立大学数学与计算机科学系副教授。他拥有耶鲁大学计算机科学硕士学位，加州大学伯克利分校计算机科学博士学位，曾任教于佐治亚理工学院。除本书外，他还撰写了广受欢迎的著作Modula-2: A Complete Guide 和Java Programming: From the Beginning，并在Dr.Dobb's Journal等权威杂志上发表了许多文章。业余时间，King教授还在多部电影中扮演过角色。

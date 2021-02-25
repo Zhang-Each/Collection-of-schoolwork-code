@@ -1,0 +1,21 @@
+<!--pages/classlist/classlist.wxml-->
+<!--index.wxml-->
+<view class="top">
+  <view wx:for="{{['周一','周二','周三','周四','周五','周六','周日']}}" class="top-text">{{item}}</view>
+</view>
+<scroll-view scroll-y="true" class="scroll">
+  <view style="height:1200rpx;width:730rpx;display:flex;">
+    <view style="background-color:rgb(87, 90, 94);color:#FFFFFF;">
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" class="left">
+        {{item}}
+      </view>
+    </view>
+   
+    <!--课表-->
+    <view wx:for="{{classlist}}">
+      <view class="flex-item kcb-item" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.day-1)*100}}rpx;margin-top:{{(item.start-1)*100+5}}rpx;height:{{item.long*100-5}}rpx;background-color:{{colorArrays[index%9]}}">
+        <view class="smalltext" >{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

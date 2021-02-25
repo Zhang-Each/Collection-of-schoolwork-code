@@ -1,0 +1,4 @@
+涵盖Java EE主流框架技术SSM Redis，快速上手开发
+用Spring MVC整合MyBatis框架技术
+用Spring整合Redis在Java互联网技术上的应用
+通过秒杀、抢红包讲解互联网高并发业务

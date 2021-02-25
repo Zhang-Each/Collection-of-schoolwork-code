@@ -1,0 +1,1 @@
+David R.Hanson 普林斯顿大学计算机科学系教授，有着二十多年编程语言研究经验。他曾经同贝尔实验室合作开展研究工作，是适用于UNIX系统上的高质量C编译器Icc的开 发者之一。另著有A Retargetable C Compiler: Design and Implementation一书。

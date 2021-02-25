@@ -1,0 +1,14 @@
+&lt;
+	《Python袖珍指南（第五版）》&lt;span style="font-family: 宋体;"&gt;涵盖内容&lt;/span&gt;&lt;span&gt;: 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●内建对象类型，包括数字、列表、字典等更多内容。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●创建和处理对象的语句和语法。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●结构化和重用代码所用的函数与模块。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●&lt;/span&gt;&lt;span&gt;Python&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;面向对象的编程工具。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●内建函数、异常和属性。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●专有运算符重载方法。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●广泛应用的标准库模块和扩展。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●命令行选项与开发工具。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●&lt;/span&gt;&lt;span&gt;Python&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;的习语与提示。&lt;/span&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;●&lt;/span&gt;&lt;span&gt;Python&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;的&lt;/span&gt;&lt;span&gt;SQL&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;数据库&lt;/span&gt;&lt;span&gt;API&lt;/span&gt;&lt;span style="font-family: 宋体;"&gt;。&lt;/span&gt;
+&lt;/
+ 显示全部信息

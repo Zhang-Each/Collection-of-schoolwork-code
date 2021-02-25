@@ -1,0 +1,1 @@
+Ian F.Darwin ，已在计算机工业界工作了三十年。除了编程和提供咨询，Ian还为Learning Tree International公司讲授UNIX、C和Java，这是一家世界上*的培训公司之一。他还编写了《Checking C Programs with Lint》（O'Reilly 公司出版）一书，以及超过100篇有关C和UNIX方面的文章。

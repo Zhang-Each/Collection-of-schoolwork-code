@@ -1,0 +1,1 @@
+Andrew Koenig AT＆T大规模程序研发部（莉贝尔实验室)成员。他从1 986年开始从事C语言的研究，1977年加入贝尔实验室。在1989年ISO／ANSI C 委员会成立时，他就加入了该委员会，并一直担任项目编辑；他还是《Rumirlatio rls on C 》(C 沉思录)、《CTraps and Pitfalls》的

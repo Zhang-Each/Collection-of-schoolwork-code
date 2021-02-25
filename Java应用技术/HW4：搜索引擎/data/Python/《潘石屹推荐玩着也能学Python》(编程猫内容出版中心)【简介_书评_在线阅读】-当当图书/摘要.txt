@@ -1,0 +1,35 @@
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;人大附中等&lt;/strong&gt;&lt;strong&gt;11500&lt;/strong&gt;&lt;strong&gt;所中小学、1827万家长的共同选择&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;人大附中、华师大附中等学校已引进编程猫课程。本书由国际化资深教研团队编写，哈佛大学教育学博士顾问团背书。在学校、培训机构、家长圈都已有口皆碑。&lt;/
+&lt;&lt;/
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;前央视主持人张泉灵、教育部国培专家李维明、编程猫联合创始人李天驰等专家名人推荐&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;&lt;strong&gt;张泉灵&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;前央视名嘴&lt;/strong&gt;&lt;/
+&lt;“玩着学编程”系列丛书不扼杀孩子们的玩心，将杂糅了各个学科知识的计算思维融入生活细节。&lt;/
+&lt;&lt;strong&gt;李维明&lt;/strong&gt; &lt;strong&gt;教育部国培计划专家&lt;/strong&gt;&lt;/
+&lt;编程可以“玩着学”：一边设计着游戏的人物、场景，一边搭建着程序的积木、模块；一边做游戏，一边学编程。&lt;/
+&lt;&lt;strong&gt;李天驰&lt;/strong&gt; &lt;strong&gt;编程猫联合创始人&lt;/strong&gt;&lt;strong&gt;&amp;CEO&lt;/strong&gt;&lt;/
+&lt;玩着“学编程”系列丛书以好玩的游戏和互动参与感让孩子代入其中，逐步挖掘图形化和 Python 编程的各种可能性。我相信这套书对初学者来说一定有非常大的吸引力，对学校老师和机构老师来说，也是难得的一本参考书。&lt;/
+&lt;&lt;/
+&lt;&lt;strong&gt;本书的四大突出优势：&lt;/strong&gt;&lt;/
+&lt;玩着也能学编程，到底能让孩子学到什么？&lt;/
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;游戏化学习，让学习能力10倍增长。每款游戏都配有二维码视频，学习更轻松！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;很多家长常念叨：“你要是把玩游戏的心用在学习上，考清华北大都没问题！”本书正是引导孩子把玩心用在学习上，由兴趣导入，先学会制作游戏，再学会编程。&lt;/
+&lt;&lt;/
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拒绝填鸭式教育，培养孩子计算思维&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;在信息爆炸的时代，我们不再看重博闻强识的“硬盘型”人才，而是融会贯通的“创作型”人才。本书从游戏切入，训练孩子的计算思维，培养他们解决生活中真实问题的能力。&lt;/
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;爱编程的孩子，语数外成绩往往无法更好&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;编程能够将孩子们天马行空的想象付诸实践，让他们主动学习各学科知识进行创作。本书打通各学科界限，融合各学科知识，只为培养不偏科、有解决实际问题能力的孩子。&lt;/
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;未来教室：编程猫教学管理一体化云平台，完善的学习环境、丰富的学习资源&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;本书的游戏项目基于编程猫未来教室平台。未来教室是编程猫教学管理一体化云平台，本书中每个案例的图片、声音素材等电子资源，均可通过登录未来教室获取，为读者提供丰富的学习资源。&lt;/
+ 显示全部信息

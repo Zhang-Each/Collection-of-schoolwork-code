@@ -1,0 +1,86 @@
+Preface Since the seventh edition of this book waspublished, the field has seen continued innovations and improvements. In thisnew edition, I try to capture these changes while maintaining a broad andcomprehensive coverage of the entire field. To begin the process of revision,the seventh edition of this book was extensively reviewed by a number ofprofessors who teach the subject and by professionals working in the field. Theresult is that, in many places, the narrative has been clarified and tightened,and illustrations have been improved. Beyond these refinements to improvepedagogy and user friendliness, the technical content of the book has beenupdated throughout, to reflect the ongoing changes in this exciting field, andthe instructor and student support has been expanded. The most noteworthychanges are as follows: ? Windows 8: Windows 8 is Microsoft’slatest OS offering for PCs, workstations, and servers, which includes a numberof changes to the internal architecture. 
+Preface
+
+Since the seventh edition of this book was
+published, the field has seen continued innovations and improvements. In this
+new edition, I try to capture these changes while maintaining a broad and
+comprehensive coverage of the entire field. To begin the process of revision,
+the seventh edition of this book was extensively reviewed by a number of
+professors who teach the subject and by professionals working in the field. The
+result is that, in many places, the narrative has been clarified and tightened,
+and illustrations have been improved.
+
+Beyond these refinements to improve
+pedagogy and user friendliness, the technical content of the book has been
+updated throughout, to reflect the ongoing changes in this exciting field, and
+the instructor and student support has been expanded. The most noteworthy
+changes are as follows:
+
+? Windows 8: Windows 8 is Microsoft’s
+latest OS offering for PCs, workstations, and servers, which includes a number
+of changes to the internal architecture.
+
+The new edition provides details on Windows
+8 internals in all of the key technology areas covered in this book, including
+process/thread management, scheduling, memory management, security, file
+systems, and I/O.
+
+? Android operating system: Android is the
+fastest growing mobile platform. The real-world constraints and operating
+environment of mobile devices are quite different from traditional desktop or
+server computers. It is important for students to learn this new environment.
+
+? Embedded Linux: The use of a minimal
+version of Linux for embedded systems has grown in popularity. This new edition
+provides an overview of the key elements of the embedded Linux approach.
+
+? Virtual machines: Server virtualization
+and other forms of virtual machines are becoming increasingly widespread. A new
+chapter deals with the operating system design issues for virtual machines.
+
+? Multicore design issues: The dominant
+computer architecture is now multicore. This raises new OS design issues that
+are addressed in this new edition.
+
+? I/O standards: The book has been updated
+to reflect the latest developments, including Thunderbolt.
+
+? Storage hardware: The discussion of
+storage hardware has been updated and now includes discussion of solid-state
+drives.
+
+? Fault tolerance: The ACM/IEEE Computer
+Science Curricula 2013 lists fault tolerance as one of the core topics for an
+OS course. A new section provides an overview of fault tolerance. Objectives
+
+This book is about the concepts, structure,
+and mechanisms of operating systems. Its purpose is to present, as clearly and
+completely as possible, the nature and characteristics of modern-day operating
+systems.
+
+This task is challenging for several
+reasons. First, there is a tremendous range and variety of computer systems for
+which operating systems are designed. These include embedded systems, smart
+phones, single-user workstations and personal computers, medium-sized shared
+systems, large mainframe and supercomputers, and specialized machines such as
+real-time systems. The variety is not just in the capacity and speed of
+machines, but in applications and system support requirements.
+
+Second, the rapid pace of change that has
+always characterized computer systems continues with no letup. A number of key
+areas in operating system design are of recent origin, and research into these
+and other new areas continues.
+
+In spite of this variety and pace of
+change, certain fundamental concepts apply consistently throughout. To be sure,
+the application of these concepts depends on the current state of technology
+and the particular application requirements. The intent of this book is to
+provide a thorough discussion of the fundamentals of operating system design
+and to relate these to contemporary design issues and to current directions in
+the development of operating systems. Example Systems
+
+This text is intended to acquaint the
+reader with the design principles and implementation issues of contemporary
+operating systems. Accordingly, a purely conceptual or theoretical treatment
+would be inadequate. To illustrate the concepts and
+ 显示全部信息

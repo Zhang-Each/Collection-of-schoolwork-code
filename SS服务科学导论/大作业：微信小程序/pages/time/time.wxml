@@ -1,0 +1,24 @@
+<!--pages/time/time.wxml-->
+<view class='container_my'>
+  <text class='prompt'>设置入睡和起床时间</text>
+  <view class='function'>
+    <view class='button_my' style='border-bottom-width: 1rpx;border-bottom-color:#292D48;border-bottom-style:solid; '>
+      <picker mode="selector" range="{{sel_beginTime}}" value="{{begin_index}}" bindchange="bindBeginTimeChange">
+        <text class='pick_word'>入睡时间:</text>
+        <text class='pick_time'> {{beginTime}}</text>
+      </picker>
+    </view>
+    <view class='button_my' style='border-top: none;'>
+    <picker mode="selector" range="{{sel_endTime}}" value="{{end_index}}"            bindchange="bindEndTimeChange">
+          <text class='pick_word'>起床时间:</text>
+          <text class='pick_time'> {{endTime}}</text>
+      </picker>
+    </view>
+  </view>
+  <button  size="{{primarySize}}"  class='button_time' 
+  form-type="submit" bindchange="bindSetTime" bindtap="showTarget">
+  确定
+  </button>
+  <text class='matters'>· 一段时间最好固定起床时间\n</text>
+  <text class='matters'>· 从起床时间倒退五个睡眠周期(一个90分钟)，获得入睡时间\n</text>
+</view>

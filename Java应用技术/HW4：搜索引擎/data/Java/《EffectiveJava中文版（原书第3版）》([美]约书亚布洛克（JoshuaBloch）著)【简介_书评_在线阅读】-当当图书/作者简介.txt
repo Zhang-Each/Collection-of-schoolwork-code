@@ -1,0 +1,8 @@
+【作者简介 】 Joshua Bloch　美国卡内基-梅隆大学教授，曾是Google公司首席Java架构师、Sun公司杰出工程师和Transarc公司高级系统设计师。他带领团队设计和实现过无数的Java平台特性，包括JDK 5.0语言增强版和获奖的Java Collections Framework。他拥有哥伦比亚大学的计算机科学学士学位和卡内基-梅隆大学的计算机科学博士学位。他的著作还包括《Java Puzzlers》和《Java并发编程实战》（曾获Jolt大奖提名）等。 【译者简介】 
+【作者简介 】
+
+Joshua Bloch　美国卡内基-梅隆大学教授，曾是Google公司首席Java架构师、Sun公司杰出工程师和Transarc公司高级系统设计师。他带领团队设计和实现过无数的Java平台特性，包括JDK 5.0语言增强版和获奖的Java Collections Framework。他拥有哥伦比亚大学的计算机科学学士学位和卡内基-梅隆大学的计算机科学博士学位。他的著作还包括《Java Puzzlers》和《Java并发编程实战》（曾获Jolt大奖提名）等。
+
+【译者简介】 
+
+俞黎敏（YuLimin，网名：阿敏总司令） 2008年7月加入IBM广州分公司，担任高级技术顾问，主要负责WebSphere系列产品以及云计算、物联网相关的技术支持工作，专注于产品新特性、系统性能调优、疑难问题诊断与解决。开源爱好者，曾参与Spring中文论坛组织的《Spring 2.0 Reference》中文翻译的一审与二审，满江红开放技术研究组织的《Seam 1.2.1 Reference》的中文翻译，组织完成了《Seam 2.0 Reference》的中文翻译工作。CSDN、CJSDN、Dev2Dev、Matrix、JavaWorldTW、Spring中文等Java论坛的版主，在各大技术社区为推动开源和敏捷开发做出了积极的贡献。翻译与审校过多本图书。 显示全部信息

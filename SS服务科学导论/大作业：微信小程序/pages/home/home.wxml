@@ -1,0 +1,51 @@
+<!--logs.wxml-->
+<view class = '{{bg}}'>
+  <view class="container_my">
+    <view class="tree-box">
+        <view class="one-box">
+          <text wx:if="{{currenttime >= 6 && currenttime < 12}}">\n早上好</text>
+          <text wx:elif="{{currenttime >= 12 && currenttime < 18}}">\n下午好</text>
+          <text wx:elif="{{currenttime < 6 || currenttime >= 18}}">\n晚上好</text>
+        </view>
+        <view class="one-box1">
+          <image class="tree-icon" src="../../images/signin-before.png"></image>
+        </view>
+        <view style="clear:both"></view>
+    </view>
+    <text wx:if="{{currenttime >= 6 && currenttime < 12}}" class='userinfo-word1' style='color:#808A87;'>\n从睡梦中醒来，这是崭新的一天。</text>
+    <text wx:elif="{{currenttime >= 12 && currenttime < 18}}" class='userinfo-word1' style='color:#808A87;'>\n去午后阳光里沐浴吧。</text>
+    <text wx:elif="{{currenttime < 6 || currenttime >= 18}}" class='userinfo-word1' style='color:#808A87;'>\n生活,就是你睡不着的时候发生的事。</text>
+    <view class="function">
+      <form report-submit bindsubmit="bindFunc">
+        <button class='button_func' hover-class='button_func_hover' bindtap='bindToCalRecord' form-type='submit'>
+        <view class='button_left'>
+        <image src='../../images/my/calendar.png' class='button_img'></image>
+        <text class='button_word'>早睡日历</text>
+        </view>
+          <text class='button_text'>></text>
+        </button>
+        <button class='button_func' hover-class='button_func_hover' bindtap='bindToUpdateTime' form-type='submit'>
+    <view class='button_left'>
+        <image src='../../images/my/time.png' class='button_img' ></image>
+        <text class='button_word'>签到时间</text>
+        </view>
+          <text class='button_text'>{{beginTime}}~{{endTime}} ></text>
+        </button>
+        <button class='button_func' hover-class='button_func_hover' bindtap='bindToAdmire' form-type='submit'>
+    <view class='button_left'>
+        <image src='../../images/my/like.png' class='button_img'></image>
+        <text class='button_word'>R90睡眠法</text>
+        </view>
+          <text class='button_text'>></text>
+        </button>
+        <button class='button_func' hover-class='button_func_hover' bindtap='bindToAbout' form-type='submit'>
+    <view class='button_left'>
+        <image src='../../images/my/about.png' class='button_img'></image>
+        <text class='button_word'>助眠音乐</text>
+        </view>
+          <text class='button_text'>></text>
+        </button>
+      </form>
+    </view>
+  </view>
+</view>

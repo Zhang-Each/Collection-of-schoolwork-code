@@ -1,0 +1,1 @@
+如果今年你只打算买一本C++的书，那就选这本吧！ ——Josh Walker，ACCU成员 C++世界期待已久的重量级著作。——Marc Briand, C/C++ Users Journal前任总编一句话，模板圣经已经写就，请研习。 ——MaximKhesin, CVISION Technologies, LLC

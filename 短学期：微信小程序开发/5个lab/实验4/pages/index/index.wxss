@@ -1,0 +1,33 @@
+/**index.wxss**/
+.title{
+  width:100%;
+  height:30px;
+  background-color: rgb(18, 18, 19);
+  color: white;
+  text-align: center;
+  font-family: "楷体";
+  font-weight: bolder;
+}
+.resultbox{
+  height: 50px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 25px;
+}
+.form0{
+  height: 30px;
+  font-weight: bold;
+
+}
+.form1 {
+  width: 25%;
+  background-color: rgb(88, 88, 90);
+  color: white;
+  background: bg_red;
+}
+.form2{
+  width: 25%;
+  background-color: rgb(240, 159, 9);
+  color: white;
+  background: bg_red;
+}

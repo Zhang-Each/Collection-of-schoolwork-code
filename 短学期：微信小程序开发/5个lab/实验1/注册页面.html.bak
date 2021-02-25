@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>3180103772张溢弛实验1</title>
+</head>
+<body>
+ <h1 align="center"> <b>注册界面</b></h1>
+ <h2 align="center">亲爱的同学 欢迎您报名浙江大学暑期夏令营 请先注册您的账号</h2>
+<form>
+<table width="550px" bgcolor="#f2f2f2" align="center">
+  <tr>
+    <td>姓名</td>
+    <td><input type="text" name="username" placeholder="请输入您的真实姓名"></td>
+  </tr>
+  <tr>
+    <td>密码</td>
+	<td><input type="password" name="code"></td>
+  </tr>
+  <tr>
+    <td>确认密码</td>
+	<td><input type="password" name="code"></td>
+  </tr>
+  <tr>
+    <td>性别</td>
+	<td>男<input type="radio" name="sex" value="male">
+	女<input type="radio" name="sex" value="female"></td>
+  </tr>
+  <tr>
+    <td>请上传照片</td>
+	<td><input type="file" name="photo"></td>
+  </tr>
+  <tr>
+    <td>所在院校</td>
+	<td><input type="text" name="school"></td>
+  </tr>
+  <tr>
+    <td>自我陈述</td>
+	<td><input type="text" name="introduce" Size="60"placeholder="简要介绍一下你自己"></td>
+  </tr>
+  <tr>
+  <td><a href="http://www.zju.edu.cn">联系我们</a></td>
+  <td><a href="http://www.baidu.com">信息查询</a></td>
+</table>
+ </form>
+ <center><a href=""><input type="button" value="点击注册账号" name="button1"></center>
+ </body>
+</html>

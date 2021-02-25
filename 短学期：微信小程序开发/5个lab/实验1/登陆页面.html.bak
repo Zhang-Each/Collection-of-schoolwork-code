@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="张溢弛">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>张溢弛实验1界面二</title>
+ </head>
+ <body>
+  <h1 align="center"> <b>登陆界面</b></h1>
+  <h2><center>恭喜您的账号注册成功 请输入您的姓名与密码登陆！</center></h2>
+  <form>
+  <table width="550px" bgcolor="#d0d0d0" align="center">
+  <tr>
+     <td>姓名:</td>
+	 <td><input type="text" name="usersname2" placeholder="请输入注册时填写的姓名"></td>
+	 </tr>
+  <tr>
+     <td>密码</td>
+	 <td><input type="password" name="code2" ></td>
+  </tr>
+  <tr>
+     <td><a href="注册页面.html">注册账号</a></td>
+     <td><a href="忘记密码.html">忘记密码</a></td>
+  </tr>
+
+  </table>
+  </form>
+  <center><a href="内容页面.html"><input type="button" value="登陆" name="button2"></center>
+  <div><center><img src="地图.jpg"/></center></div>
+ </body>
+</html>

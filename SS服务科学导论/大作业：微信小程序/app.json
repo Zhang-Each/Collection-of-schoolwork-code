@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/time/time",
+    "pages/sign/sign",
+    "pages/calendar/calendar",
+    "pages/signRecord/signRecord",
+    "pages/indexm/indexm",
+    "pages/logs/logs",
+    "pages/audio/audio",
+    "pages/my/my",
+    "pages/admire/admire",
+    "pages/about/about",
+    "pages/feedback/feedback",
+    "pages/classlist/classlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#212121",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "睡眠管家"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "borderStyle": "black",
+    "backgroundColor": "#212121",
+    "selectedColor": "#6D7ACF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/sleep-2.png",
+        "selectedIconPath": "images/sleep-1.png"
+      },
+      {
+        "pagePath": "pages/classlist/classlist",
+        "text": "日程",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

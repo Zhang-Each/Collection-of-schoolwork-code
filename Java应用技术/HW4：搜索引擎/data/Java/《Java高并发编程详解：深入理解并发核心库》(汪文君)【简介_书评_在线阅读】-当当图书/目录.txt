@@ -1,0 +1,451 @@
+第1章　JMH 1 1.1　JMH简介 1 1.2　JMH快速入门 1 1.2.1　用main方法进行测试 1 1.2.2　用JMH进行微基准测试 3 1.3　JMH的基本用法 6 1.3.1　@Benchmark标记基准测试方法 7 1.3.2　Warmup以及Measurement 8 1.3.3　四大BenchmarkMode 10 1.3.4　OutputTimeUnit 14 1.3.5　三大State的使用 14 1.3.6　@Param的妙用 19 1.3.7　JMH的测试套件（Fixture） 23 1.3.8　CompilerControl 26 
+
+第1章　JMH 1
+
+
+1.1　JMH简介  1
+
+1.2　JMH快速入门  1
+
+1.2.1　用main方法进行测试  1
+
+1.2.2　用JMH进行微基准测试  3
+
+1.3　JMH的基本用法  6
+
+1.3.1　@Benchmark标记基准测试方法  7
+
+1.3.2　Warmup以及Measurement  8
+
+1.3.3　四大BenchmarkMode  10
+
+1.3.4　OutputTimeUnit  14
+
+1.3.5　三大State的使用  14
+
+1.3.6　@Param的妙用  19
+
+1.3.7　JMH的测试套件（Fixture）  23
+
+1.3.8　CompilerControl  26
+
+1.4　编写正确的微基准测试以及高级用法  27
+
+1.4.1　编写正确的微基准测试用例  28
+
+1.4.2　一些高级的用法  38
+
+1.5　JMH的Profiler  45
+
+1.5.1　StackProfiler  45
+
+1.5.2　GcProfiler  47
+
+1.5.3　ClassLoaderProfiler  51
+
+1.5.4　CompilerProfiler  54
+
+1.6　本章总结  56
+
+ 
+
+
+第2章　Java并发包之原子类型详解 57
+
+
+2.1　AtomicInteger详解  58
+
+2.1.1　性能测试对比  58
+
+2.1.2　AtomicInteger的基本用法  61
+
+2.1.3　AtomicInteger内幕  66
+
+2.1.4　AtomicInteger总结  68
+
+2.2　AtomicBoolean详解  69
+
+2.2.1　AtomicBoolean的基本用法  69
+
+2.2.2　AtomicBoolean内幕  71
+
+2.2.3　Try Lock显式锁的实现  71
+
+2.2.4　AtomicBoolean总结  74
+
+2.3　AtomicLong详解  74
+
+2.4　AtomicReference详解  76
+
+2.4.1　AtomicReference的应用场景  77
+
+2.4.2　AtomicReference的基本用法  83
+
+2.4.3　AtomicReference的内幕  84
+
+2.4.4　AtomicReference总结  86
+
+2.5　AtomicStampedReference详解  86
+
+2.5.1　CAS算法ABA问题  86
+
+2.5.2　AtomicStampedReference详解  87
+
+2.5.3　AtomicStampedReference总结  89
+
+2.6　AtomicArray详解  89
+
+2.7　AtomicFieldUpdater详解  90
+
+2.7.1　原子性更新对象属性  90
+
+2.7.2　注意事项  91
+
+2.7.3　AtomicFieldUpdater总结  93
+
+2.8　sun.misc.Unsafe详解  93
+
+2.8.1　如何获取Unsafe  94
+
+2.8.2　JNI、Java和C/C 混合编程  95
+
+2.8.3　危险的Unsafe  98
+
+2.8.4　sun.misc.Unsafe总结  100
+
+2.9　本章总结  100
+
+ 
+
+
+第3章　Java并发包之工具类详解 102
+
+
+3.1　CountDownLatch工具详解  102
+
+3.1.1　等待所有子任务结束  103
+
+3.1.2　CountDownLatch的其他方法及总结  106
+
+3.2　CyclicBarrier工具详解  107
+
+3.2.1　等待所有子任务结束  107
+
+3.2.2　CyclicBarrier的循环特性  110
+
+3.2.3　CyclicBarrier的其他方法以及总结  114
+
+3.2.4　CyclicBarrier VS. CountDownLatch  116
+
+3.3　Exchanger工具详解  116
+
+3.3.1　一对线程间的数据交换  116
+
+3.3.2　Exchanger的方法详解  121
+
+3.3.3　Exchanger总结  123
+
+3.4　Semaphore工具详解  124
+
+3.4.1　Semaphore限制同时在线的用户数量  124
+
+3.4.2　使用Semaphore定义try lock  127
+
+3.4.3　Semaphore其他方法详解  129
+
+3.4.4　扩展Semaphore增强release  135
+
+3.4.5　Semaphore总结  138
+
+3.5　Phaser工具详解  138
+
+3.5.1　Phaser的基本用法  138
+
+3.5.2　Phase（阶段）以及Phaser方法详解  144
+
+3.5.3　Phaser层级关系  148
+
+3.5.4　Phaser总结  149
+
+3.6　Lock&ReentrantLock详解  150
+
+3.6.1　Lock及ReentrantLock方法详解  150
+
+3.6.2　正确使用显式锁Lock  152
+
+3.6.3　ReentrantLock VS. Synchronized关键字  158
+
+3.6.4　显式锁Lock总结  164
+
+3.7　ReadWriteLock&ReentrantRead-WriteLock详解  165
+
+3.7.1　读写锁的基本使用方法  165
+
+3.7.2　读写锁的方法  167
+
+3.7.3　基准测试性能对比  167
+
+3.7.4　读写锁总结  170
+
+3.8　Condition详解  171
+
+3.8.1　初识Condition  171
+
+3.8.2　Condition接口方法详解  174
+
+3.8.3　使用Condition之生产者消费者  177
+
+3.8.4　Condition总结  181
+
+3.9　StampedLock详解  181
+
+3.9.1　读写锁的饥饿写问题  182
+
+3.9.2　StampedLock的使用  183
+
+3.9.3　与其他锁的性能对比  185
+
+3.9.4　StampedLock总结  191
+
+3.10　Guava之Monitor详解  192
+
+3.10.1　Monitor及Guard  192
+
+3.10.2　Monitor的其他方法  194
+
+3.10.3　Monitor总结  194
+
+3.11　Guava之RateLimiter详解  194
+
+3.11.1　RateLimiter的基本使用  195
+
+3.11.2　RateLimiter的限流操作——漏桶算法  196
+
+3.11.3　令牌环桶算法  201
+
+3.11.4　RateLimiter总结  204
+
+3.12　本章总结  204
+
+ 
+
+
+第4章　Java并发包之并发容器详解 205
+
+
+4.1　链表  206
+
+4.1.1　基本的链表  206
+
+4.1.2　优先级链表  210
+
+4.1.3　跳表（SkipList）  213
+
+4.1.4　链表总结  221
+
+4.2　BlockingQueue（阻塞队列）  221
+
+4.2.1　ArrayBlockingQueue  222
+
+4.2.2　PriorityBlockingQueue  226
+
+4.2.3　LinkedBlockingQueue  228
+
+4.2.4　DelayQueue  228
+
+4.2.5　SynchronousQueue  231
+
+4.2.6　LinkedBlockingDeque  233
+
+4.2.7　LinkedTransferQueue  234
+
+4.2.8　BlockingQueue总结  236
+
+4.3　ConcurrentQueue（并发队列）  237
+
+4.3.1　并发队列的性能  239
+
+4.3.2　并发队列在使用中需要注意的问题  241
+
+4.3.3　并发队列总结  245
+
+4.4　ConcurrentMap（并发映射）  245
+
+4.4.1　ConcurrentHashMap简介  245
+
+4.4.2　ConcurrentSkipListMap简介  247
+
+4.4.3　并发映射总结  247
+
+4.5　写时拷贝算法（Copy On Write）  248
+
+4.5.1　CopyOnWrite读实现操作分析  249
+
+4.5.2　CopyOnWrite写实现操作分析  249
+
+4.5.3　CopyOnWrite总结  250
+
+4.6　高并发无锁（Lock Free）数据结构的实现  250
+
+4.6.1　高并发无锁链表的实现  250
+
+4.6.2　Lock Free数据结构的测试  253
+
+4.6.3　本节总结  255
+
+4.7　本章总结  255
+
+ 
+
+
+第5章　Java并发包之ExecutorService详解 256
+
+
+5.1　Executor&ExecutorService详解  256
+
+5.1.1　ThreadPoolExecutor详解  257
+
+5.1.2　ScheduledExecutorService详解  265
+
+5.1.3　关闭ExecutorService  271
+
+5.1.4　Executors详解  273
+
+5.1.5　ExecutorService总结  276
+
+5.2　Future和Callback  277
+
+5.2.1　Future详解  277
+
+5.2.2　ExecutorService与Future  280
+
+5.2.3　Future的不足之处  282
+
+5.2.4　Google Guava的Future  282
+
+5.2.5　Future总结  284
+
+5.3　ForkJoinPool 详解  284
+
+5.3.1　Fork/Join Framework介绍  284
+
+5.3.2　ForkJoinTask详解  285
+
+5.3.3　ForkJoinPool总结  289
+
+5.4　CompletionService详解  289
+
+5.4.1　ExecutorService执行批量任务的缺陷  289
+
+5.4.2　CompletionService详解  291
+
+5.4.3　CompletionService总结  294
+
+5.5　CompletableFuture详解  294
+
+5.5.1　CompletableFuture的基本用法  294
+
+5.5.2　任务的异步运行  296
+
+5.5.3　异步任务链  296
+
+5.5.4　合并多个Future  298
+
+5.5.5　多Future的并行计算  299
+
+5.5.6　错误处理  299
+
+5.5.7　JDK 9对CompletableFuture的进一步支持  300
+
+5.5.8　CompletableFuture总结  300
+
+5.6　本章总结  301
+
+ 
+
+
+第6章　Java Streams详解 302
+
+
+6.1　Stream介绍及其基本操作  302
+
+6.1.1　如何创建Stream  303
+
+6.1.2　Stream之Intermediate操作  306
+
+6.1.3　Stream之Terminal操作  312
+
+6.1.4　NumericStream详解  317
+
+6.1.5　Stream总结  320
+
+6.2　Collector在Stream中的使用  320
+
+6.2.1　初识Collector  321
+
+6.2.2　Collectors用法详解  324
+
+6.2.3　自定义Collector  335
+
+6.2.4　Collector总结  336
+
+6.3　Parallel Stream详解  337
+
+6.3.1　并行流Parallel Stream  337
+
+6.3.2　Spliterator 详解  340
+
+6.3.3　Spliterator总结  343
+
+6.4　本章总结  344
+
+ 
+
+
+第7章　Metrics（Powerful Toolkit For Measure） 345
+
+
+7.1　Metrics快速入门  345
+
+7.1.1　如何监控度量应用程序  345
+
+7.1.2　Metrics环境搭建  346
+
+7.2　五大Metric详解  346
+
+7.2.1　Meter  347
+
+7.2.2　Gauge  349
+
+7.2.3　Counter  360
+
+7.2.4　Histogram  362
+
+7.2.5　Timer  370
+
+7.3　Reporter详解  372
+
+7.3.1　ConsoleReporter  373
+
+7.3.2　LogReporter  376
+
+7.3.3　JMXReporter  378
+
+7.3.4　CsvReporter  379
+
+7.4　Metrics Plugins  380
+
+7.4.1　Health Check  381
+
+7.4.2　JVM Instrumentation  386
+
+7.5　深入Metrics源码  387
+
+7.5.1　MetricRegistry如何工作  388
+
+7.5.2　Reporter如何工作  392
+
+7.5.3　拾遗补漏  394
+
+7.6　本章总结  396
+ 显示全部信息

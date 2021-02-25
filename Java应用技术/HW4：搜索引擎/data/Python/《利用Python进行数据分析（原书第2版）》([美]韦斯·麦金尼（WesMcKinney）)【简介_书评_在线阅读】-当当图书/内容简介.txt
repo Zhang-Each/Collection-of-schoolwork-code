@@ -1,0 +1,1 @@
+Wes McKinney 是流行的Python开源数据分析库pandas的创始人。他是一名活跃的演讲者，也是Python数据社区和Apache软件基金会的Python/C 开源开发者。目前他在纽约从事软件架构师工作。

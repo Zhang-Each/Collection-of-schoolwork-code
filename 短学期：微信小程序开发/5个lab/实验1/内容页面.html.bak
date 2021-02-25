@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="张溢弛">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>内容页面</title>
+ </head>
+ <body>
+ <h1><center> 欢迎来到浙江大学!!!</center></h1>
+
+ <h2><a href="http://www.cs.zju.edu.cn">点击有惊喜</a></h2>
+
+ <h3><a href="http://www.qsc.zju.edu.cn/news">校园生活</h3>
+
+<div><center><img src="紫金港.jpg"/></center></div>
+
+<h4 align="right"> Made by Zhang Each&copy;
+ </body>
+</html>

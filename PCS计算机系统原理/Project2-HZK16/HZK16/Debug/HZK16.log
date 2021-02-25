@@ -1,0 +1,12 @@
+﻿  main.cpp
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(28): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(32): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(127): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(210): warning C4101: “j”: 未引用的局部变量
+c:\users\74096\desktop\hzk16\hzk16\main.cpp(230): warning C4018: “<”: 有符号/无符号不匹配
+  HZK16.vcxproj -> C:\Users\74096\Desktop\HZK16\Debug\HZK16.exe

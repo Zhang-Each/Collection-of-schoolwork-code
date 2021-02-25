@@ -1,0 +1,1 @@
+本书所揭示的知识，至少能够帮助你减少C代码和初级C 代码中90%的Bug。 —— Francis Glassborow，ACCU主席

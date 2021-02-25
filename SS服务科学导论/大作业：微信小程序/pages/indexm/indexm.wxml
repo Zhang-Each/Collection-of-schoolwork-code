@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class='parentGroup'>
+
+  <!-- 背景歌曲信息动画 -->
+  <canvas class='indexBg' canvas-id="myCanvas">
+    <cover-view class="userinfo" bindtap="hideAlert">
+      <cover-image class="userinfo-avatar" src="{{playsrc}}" background-size="cover"></cover-image>
+      <cover-view class="musicLable">{{playMusicName}}</cover-view>
+      <cover-view class="musicLableTip">{{playMusicDes}}</cover-view>
+      <cover-view class='cloudGroup'>
+        <canvas class='cloudCanvas' canvas-id="cloudCanvas"></canvas>
+      </cover-view>
+    </cover-view>
+  </canvas>
+
+  <!-- 底部导航栏 -->
+  <view class='bottomAudio'>
+    <cover-view class="play-btn">
+      <cover-image  class="play-btn-like-img" src="{{likebtn}}" background-size="cover"></cover-image>
+    </cover-view>
+    <cover-view class="play-btn">
+      <cover-image  class="play-btn-pre-img" src="{{prebtn}}" background-size="cover" bindtap="clickPre"></cover-image>
+    </cover-view>
+    <cover-view class="play-btn">
+      <cover-image bindtap="playMusic" class="play-btn-img" src="{{isPlay==true?pausebtn:playbtn}}" background-size="cover"></cover-image>
+    </cover-view>
+    <cover-view class="play-btn">
+      <cover-image  class="play-btn-next-img" src="{{nextbtn}}" background-size="cover" bindtap="clickNext"></cover-image>
+    </cover-view>
+    <cover-view class="play-btn">
+      <cover-image  class="play-btn-list-img" src="{{listbtn}}" background-size="cover" bindtap="bindViewTap"></cover-image>
+    </cover-view>
+  </view>
+
+  <!-- 列表弹框 -->
+  <cover-view animation="{{animationAlert}}" class="animationAlert">
+    <cover-view bindtap='clickAlertList' data-id="{{index}}" data-name="{{item.musicName}}" data-des="{{item.musicDes}}" data-bgstart='{{item.musicBgStart}}' data-bgend='{{item.musicBgEnd}}' data-cover='{{item.musicImg}}' wx:for="{{array}}" class='listItem'>
+      <cover-image class='listItem-Img' src="{{playIndex==index?voice:item.musicImgSmall}}"></cover-image>
+      <cover-view class="{{playIndex==index?'listItem-Name-Playing':'listItem-Name'}}">{{item.musicName}}</cover-view>
+      <cover-view class="{{playIndex==index?'listItem-Des-Playing':'listItem-Des'}}">-</cover-view>
+      <cover-view class="{{playIndex==index?'listItem-Des-Playing':'listItem-Des'}}">{{item.musicDes}}</cover-view>
+    </cover-view>
+  </cover-view>
+
+</view>
